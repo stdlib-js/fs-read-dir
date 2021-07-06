@@ -41,7 +41,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/cli": "^0.0.x",
+    "@stdlib/cli-ctor": "^0.0.x",
     "@stdlib/fs-read-file": "^0.0.x",
     "@stdlib/process-cwd": "^0.0.x",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.x"
