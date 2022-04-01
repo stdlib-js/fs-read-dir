@@ -1,0 +1,35 @@
+{
+  "name": "@stdlib/fs-read-dir",
+  "version": "0.0.0",
+  "description": "Read the entire contents of a directory.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/fs-read-dir.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdfs",
+    "fs",
+    "readdir",
+    "readdirsync",
+    "path",
+    "async",
+    "sync",
+    "dir",
+    "read",
+    "open",
+    "filesystem",
+    "directory"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
