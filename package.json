@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/fs-read-dir",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Read the entire contents of a directory.",
   "license": "Apache-2.0",
   "author": {
@@ -40,10 +40,10 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/cli-ctor": "^0.0.3",
-    "@stdlib/fs-read-file": "^0.0.8",
-    "@stdlib/process-cwd": "^0.0.8",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.0.7"
+    "@stdlib/cli-ctor": "^0.1.0",
+    "@stdlib/fs-read-file": "^0.1.0",
+    "@stdlib/process-cwd": "^0.1.0",
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.1.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-browser": "^0.0.8",
