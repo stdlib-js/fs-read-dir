@@ -35,19 +35,153 @@ limitations under the License.
 
 > Read the contents of a directory.
 
+<section class="installation">
 
+## Installation
 
+```bash
+npm install @stdlib/fs-read-dir
+```
 
+Alternatively,
 
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
+</section>
 
+<section class="usage">
 
+## Usage
 
+```javascript
+var readDir = require( '@stdlib/fs-read-dir' );
+```
+
+#### readDir( path, clbk )
+
+Asynchronously reads the contents of a directory.
+
+```javascript
+readDir( __dirname, onRead );
+
+function onRead( error, data ) {
+    if ( error ) {
+        console.error( error );
+    } else {
+        console.log( data );
+        // => [...]
+    }
+}
+```
+
+#### readDir.sync( path )
+
+Synchronously reads the contents of a directory.
+
+```javascript
+var out = readDir.sync( __dirname );
+if ( out instanceof Error ) {
+    throw out;
+}
+console.log( out );
+// => [...]
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+## Notes
+
+-   The difference between this module and [`fs.readdirSync()`][fs] is that [`fs.readdirSync()`][fs] will throw if an `error` is encountered (e.g., if given a non-existent `path`) and this module will return an `error`. Hence, the following anti-pattern
+
+    ```javascript
+    var fs = require( 'fs' );
+
+    var dir = '/path/to/dir';
+
+    // Check for existence to prevent an error being thrown...
+    if ( fs.existsSync( dir ) ) {
+        dir = fs.readdirSync( dir );
+    }
+    ```
+
+    can be replaced by an approach which addresses existence via `error` handling.
+
+    ```javascript
+    var readDir = require( '@stdlib/fs-read-dir' );
+
+    var dir = '/path/to/dir';
+
+    // Explicitly handle the error...
+    dir = readDir.sync( dir );
+    if ( dir instanceof Error ) {
+        // You choose what to do...
+        throw dir;
+    }
+    ```
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+## Examples
+
+<!-- eslint no-undef: "error" -->
+
+```javascript
+var readDir = require( '@stdlib/fs-read-dir' );
+
+/* Sync */
+
+var out = readDir.sync( __dirname );
+// returns <Array>
+
+console.log( out instanceof Error );
+// => false
+
+out = readDir.sync( 'beepboop' );
+// returns <Error>
+
+console.log( out instanceof Error );
+// => true
+
+/* Async */
+
+readDir( __dirname, onRead );
+readDir( 'beepboop', onRead );
+
+function onRead( error, data ) {
+    if ( error ) {
+        if ( error.code === 'ENOENT' ) {
+            console.error( 'Directory does not exist.' );
+        } else {
+            throw error;
+        }
+    } else {
+        console.log( data );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+* * *
 
 <section class="cli">
 
-
+## CLI
 
 <section class="installation">
 
@@ -65,7 +199,7 @@ npm install -g @stdlib/fs-read-dir-cli
 
 <section class="usage">
 
-## Usage
+### Usage
 
 ```text
 Usage: read-dir [options] <dirpath>
@@ -82,7 +216,7 @@ Options:
 
 <section class="notes">
 
-## Notes
+### Notes
 
 -   Relative paths are resolved relative to the current working directory.
 -   Errors are written to `stderr`.
@@ -94,7 +228,7 @@ Options:
 
 <section class="examples">
 
-## Examples
+### Examples
 
 ```bash
 $ read-dir ./../
@@ -114,9 +248,10 @@ $ read-dir ./../
 
 <section class="related">
 
+* * *
+
 ## See Also
 
--   <span class="package-name">[`@stdlib/fs-read-dir`][@stdlib/fs-read-dir]</span><span class="delimiter">: </span><span class="description">read the entire contents of a directory.</span>
 -   <span class="package-name">[`@stdlib/fs-exists`][@stdlib/fs/exists]</span><span class="delimiter">: </span><span class="description">test whether a path exists on the filesystem.</span>
 -   <span class="package-name">[`@stdlib/fs-read-file`][@stdlib/fs/read-file]</span><span class="delimiter">: </span><span class="description">read the entire contents of a file.</span>
 
@@ -137,7 +272,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-### Community
+#### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -160,11 +295,11 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/fs-read-dir-cli.svg
-[npm-url]: https://npmjs.org/package/@stdlib/fs-read-dir-cli
+[npm-image]: http://img.shields.io/npm/v/@stdlib/fs-read-dir.svg
+[npm-url]: https://npmjs.org/package/@stdlib/fs-read-dir
 
-[test-image]: https://github.com/stdlib-js/fs-read-dir/actions/workflows/test.yml/badge.svg?branch=v0.1.1
-[test-url]: https://github.com/stdlib-js/fs-read-dir/actions/workflows/test.yml?query=branch:v0.1.1
+[test-image]: https://github.com/stdlib-js/fs-read-dir/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/fs-read-dir/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/fs-read-dir/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/fs-read-dir?branch=main
