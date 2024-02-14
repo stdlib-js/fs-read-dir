@@ -43,7 +43,8 @@
     "@stdlib/cli-ctor": "^0.1.1",
     "@stdlib/fs-read-file": "^0.2.0",
     "@stdlib/process-cwd": "^0.2.0",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.0"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.0",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-browser": "^0.1.1",
