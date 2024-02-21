@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-deno/mod.js';
 ```
 
 #### readDir( path, clbk )
@@ -105,7 +105,7 @@ console.log( out );
     can be replaced by an approach which addresses existence via `error` handling.
 
     ```javascript
-    import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+    import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-deno/mod.js';
 
     var dir = '/path/to/dir';
 
@@ -128,7 +128,7 @@ console.log( out );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-deno/mod.js';
 
 /* Sync */
 
