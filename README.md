@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/fs-read-dir/tags). For example,
+
+```javascript
 import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-esm/index.mjs';
+import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@esm/index.mjs';
 ```
 
 #### readDir( path, clbk )
@@ -105,7 +110,7 @@ console.log( out );
     can be replaced by an approach which addresses existence via `error` handling.
 
     ```javascript
-    import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-esm/index.mjs';
+    import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@esm/index.mjs';
 
     var dir = '/path/to/dir';
 
@@ -133,7 +138,7 @@ console.log( out );
 <body>
 <script type="module">
 
-import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@v0.2.1-esm/index.mjs';
+import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@esm/index.mjs';
 
 /* Sync */
 
