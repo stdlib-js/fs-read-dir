@@ -35,20 +35,33 @@ limitations under the License.
 
 > Read the contents of a directory.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/fs-read-dir
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { sync } from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+var readDir = require( '@stdlib/fs-read-dir' );
 ```
 
 #### readDir( path, clbk )
@@ -105,7 +118,7 @@ console.log( out );
     can be replaced by an approach which addresses existence via `error` handling.
 
     ```javascript
-    import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+    var readDir = require( '@stdlib/fs-read-dir' );
 
     var dir = '/path/to/dir';
 
@@ -128,7 +141,7 @@ console.log( out );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import readDir from 'https://cdn.jsdelivr.net/gh/stdlib-js/fs-read-dir@deno/mod.js';
+var readDir = require( '@stdlib/fs-read-dir' );
 
 /* Sync */
 
@@ -166,7 +179,72 @@ function onRead( error, data ) {
 
 <!-- /.examples -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/fs-read-dir-cli
+```
+
+</section>
+
+<!-- CLI usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: read-dir [options] <dirpath>
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="notes">
+
+### Notes
+
+-   Relative paths are resolved relative to the current working directory.
+-   Errors are written to `stderr`.
+-   Directory contents are written to `stdout`.
+
+</section>
+
+<!-- /.notes -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ read-dir ./../
+...
+...
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -192,7 +270,7 @@ function onRead( error, data ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -263,9 +341,9 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists/tree/deno
+[@stdlib/fs/exists]: https://github.com/stdlib-js/fs-exists
 
-[@stdlib/fs/read-file]: https://github.com/stdlib-js/fs-read-file/tree/deno
+[@stdlib/fs/read-file]: https://github.com/stdlib-js/fs-read-file
 
 <!-- </related-links> -->
 
