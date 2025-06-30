@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2025-06-30)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`f87c5e7`](https://github.com/stdlib-js/stdlib/commit/f87c5e70befaa06d3df0ae85eb47bdaaa9d93557) - **test:** use looser check to handle top-level `examples` which has `index.mjs` _(by Philipp Burckhardt)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Philipp Burckhardt
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.2.2">
 
 ## 0.2.2 (2024-07-27)

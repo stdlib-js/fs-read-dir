@@ -46,6 +46,7 @@
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2"
   },
   "devDependencies": {
+    "@stdlib/assert-contains": "^0.2.2",
     "@stdlib/assert-is-browser": "^0.2.2",
     "@stdlib/assert-is-windows": "^0.2.2",
     "@stdlib/process-exec-path": "^0.2.2",
