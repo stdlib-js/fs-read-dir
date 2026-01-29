@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-04)
+## Unreleased (2026-01-29)
 
 <section class="commits">
 
@@ -12,6 +12,8 @@
 
 <details>
 
+-   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`c894b66`](https://github.com/stdlib-js/stdlib/commit/c894b664661bfb87286304b24dd5a1758ae482b7) - **test:** use .strictEqual() instead of .equal() and fix lint errors _(by Philipp Burckhardt)_
 -   [`542fce1`](https://github.com/stdlib-js/stdlib/commit/542fce196f903aae5578a7ad528f627bdcf497e0) - **test:** always resolve the package's examples folder _(by Athan Reines)_
 -   [`f87c5e7`](https://github.com/stdlib-js/stdlib/commit/f87c5e70befaa06d3df0ae85eb47bdaaa9d93557) - **test:** use looser check to handle top-level `examples` which has `index.mjs` _(by Philipp Burckhardt)_
 
