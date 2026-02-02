@@ -1,5 +1,5 @@
 {
-  "name": "@stdlib/fs-read-dir",
+  "name": "@stdlib/fs-read-dir-cli",
   "version": "0.2.2",
   "description": "Read the entire contents of a directory.",
   "license": "Apache-2.0",
@@ -16,21 +16,6 @@
   "bin": {
     "read-dir": "./bin/cli"
   },
-  "main": "./lib",
-  "directories": {
-    "benchmark": "./benchmark",
-    "doc": "./docs",
-    "example": "./examples",
-    "lib": "./lib",
-    "test": "./test"
-  },
-  "types": "./docs/types",
-  "scripts": {
-    "test": "make test",
-    "test-cov": "make test-cov",
-    "examples": "make examples",
-    "benchmark": "make benchmark"
-  },
   "homepage": "https://stdlib.io",
   "repository": {
     "type": "git",
@@ -43,8 +28,7 @@
     "@stdlib/cli-ctor": "^0.2.2",
     "@stdlib/fs-read-file": "^0.2.2",
     "@stdlib/process-cwd": "^0.2.2",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
-    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
+    "@stdlib/fs-read-dir": "0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-contains": "^0.3.0",
@@ -53,24 +37,8 @@
     "@stdlib/process-exec-path": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
-    "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.2"
+    "tap-min": "git+https://github.com/Planeshifter/tap-min.git"
   },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">2.7.0"
-  },
-  "os": [
-    "aix",
-    "darwin",
-    "freebsd",
-    "linux",
-    "macos",
-    "openbsd",
-    "sunos",
-    "win32",
-    "windows"
-  ],
   "keywords": [
     "stdlib",
     "stdfs",
