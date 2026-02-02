@@ -43,7 +43,8 @@
     "@stdlib/cli-ctor": "^0.2.2",
     "@stdlib/fs-read-file": "^0.2.2",
     "@stdlib/process-cwd": "^0.2.2",
-    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3"
+    "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-contains": "^0.3.0",
