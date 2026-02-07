@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/fs-read-dir",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Read the entire contents of a directory.",
   "license": "Apache-2.0",
   "author": {
@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "@stdlib/cli-ctor": "^0.2.2",
-    "@stdlib/fs-read-file": "^0.2.2",
-    "@stdlib/process-cwd": "^0.2.2",
+    "@stdlib/fs-read-file": "^0.2.3",
+    "@stdlib/process-cwd": "^0.2.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.3"
   },
   "devDependencies": {
